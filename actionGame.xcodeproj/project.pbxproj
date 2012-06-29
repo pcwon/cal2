@@ -13,6 +13,14 @@
 		E30A8E74159D2F6B00674152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E72159D2F6B00674152 /* InfoPlist.strings */; };
 		E30A8E76159D2F6B00674152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A8E75159D2F6B00674152 /* main.m */; };
 		E30A8E7A159D2F6B00674152 /* abcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A8E79159D2F6B00674152 /* abcAppDelegate.m */; };
+		E30A8E84159D2F8B00674152 /* act0.png in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E80159D2F8B00674152 /* act0.png */; };
+		E30A8E85159D2F8B00674152 /* act1.png in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E81159D2F8B00674152 /* act1.png */; };
+		E30A8E86159D2F8B00674152 /* act2.png in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E82159D2F8B00674152 /* act2.png */; };
+		E30A8E87159D2F8B00674152 /* act3.png in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E83159D2F8B00674152 /* act3.png */; };
+		E30A8E8A159D2FC500674152 /* ActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A8E89159D2FC500674152 /* ActionView.m */; };
+		E30A8E8D159D2FDB00674152 /* Graphics.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A8E8C159D2FDB00674152 /* Graphics.m */; };
+		E30A8E94159D33C700674152 /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E30A8E92159D33C700674152 /* ActionViewController.m */; };
+		E30A8E95159D33C700674152 /* ActionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30A8E93159D33C700674152 /* ActionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +28,23 @@
 		E30A8E69159D2F6B00674152 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E30A8E6B159D2F6B00674152 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E30A8E6D159D2F6B00674152 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E30A8E71159D2F6B00674152 /* actionGame-Info.plist */ = {isa = PBXFileReference; path = "actionGame-Info.plist"; sourceTree = "<group>"; };
+		E30A8E71159D2F6B00674152 /* actionGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "actionGame-Info.plist"; sourceTree = "<group>"; };
 		E30A8E73159D2F6B00674152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E30A8E75159D2F6B00674152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E30A8E77159D2F6B00674152 /* actionGame-Prefix.pch */ = {isa = PBXFileReference; path = "actionGame-Prefix.pch"; sourceTree = "<group>"; };
-		E30A8E78159D2F6B00674152 /* abcAppDelegate.h */ = {isa = PBXFileReference; path = abcAppDelegate.h; sourceTree = "<group>"; };
+		E30A8E77159D2F6B00674152 /* actionGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "actionGame-Prefix.pch"; sourceTree = "<group>"; };
+		E30A8E78159D2F6B00674152 /* abcAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = abcAppDelegate.h; sourceTree = "<group>"; };
 		E30A8E79159D2F6B00674152 /* abcAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = abcAppDelegate.m; sourceTree = "<group>"; };
+		E30A8E80159D2F8B00674152 /* act0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act0.png; sourceTree = "<group>"; };
+		E30A8E81159D2F8B00674152 /* act1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act1.png; sourceTree = "<group>"; };
+		E30A8E82159D2F8B00674152 /* act2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act2.png; sourceTree = "<group>"; };
+		E30A8E83159D2F8B00674152 /* act3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = act3.png; sourceTree = "<group>"; };
+		E30A8E88159D2FC500674152 /* ActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionView.h; path = ../ActionView.h; sourceTree = "<group>"; };
+		E30A8E89159D2FC500674152 /* ActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionView.m; path = ../ActionView.m; sourceTree = "<group>"; };
+		E30A8E8B159D2FDB00674152 /* Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Graphics.h; path = ../Graphics.h; sourceTree = "<group>"; };
+		E30A8E8C159D2FDB00674152 /* Graphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Graphics.m; path = ../Graphics.m; sourceTree = "<group>"; };
+		E30A8E91159D33C700674152 /* ActionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		E30A8E92159D33C700674152 /* ActionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		E30A8E93159D33C700674152 /* ActionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E30A8E6E159D2F6B00674152 /* CoreGraphics.framework in Frameworks */,
 				E30A8E6A159D2F6B00674152 /* UIKit.framework in Frameworks */,
 				E30A8E6C159D2F6B00674152 /* Foundation.framework in Frameworks */,
-				E30A8E6E159D2F6B00674152 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +93,13 @@
 			children = (
 				E30A8E78159D2F6B00674152 /* abcAppDelegate.h */,
 				E30A8E79159D2F6B00674152 /* abcAppDelegate.m */,
+				E30A8E8C159D2FDB00674152 /* Graphics.m */,
+				E30A8E8B159D2FDB00674152 /* Graphics.h */,
+				E30A8E89159D2FC500674152 /* ActionView.m */,
+				E30A8E88159D2FC500674152 /* ActionView.h */,
+				E30A8E91159D33C700674152 /* ActionViewController.h */,
+				E30A8E92159D33C700674152 /* ActionViewController.m */,
+				E30A8E93159D33C700674152 /* ActionViewController.xib */,
 				E30A8E70159D2F6B00674152 /* Supporting Files */,
 			);
 			path = actionGame;
@@ -82,6 +108,10 @@
 		E30A8E70159D2F6B00674152 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E30A8E80159D2F8B00674152 /* act0.png */,
+				E30A8E81159D2F8B00674152 /* act1.png */,
+				E30A8E82159D2F8B00674152 /* act2.png */,
+				E30A8E83159D2F8B00674152 /* act3.png */,
 				E30A8E71159D2F6B00674152 /* actionGame-Info.plist */,
 				E30A8E72159D2F6B00674152 /* InfoPlist.strings */,
 				E30A8E75159D2F6B00674152 /* main.m */,
@@ -142,6 +172,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30A8E74159D2F6B00674152 /* InfoPlist.strings in Resources */,
+				E30A8E84159D2F8B00674152 /* act0.png in Resources */,
+				E30A8E85159D2F8B00674152 /* act1.png in Resources */,
+				E30A8E86159D2F8B00674152 /* act2.png in Resources */,
+				E30A8E87159D2F8B00674152 /* act3.png in Resources */,
+				E30A8E95159D33C700674152 /* ActionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +189,9 @@
 			files = (
 				E30A8E76159D2F6B00674152 /* main.m in Sources */,
 				E30A8E7A159D2F6B00674152 /* abcAppDelegate.m in Sources */,
+				E30A8E8A159D2FC500674152 /* ActionView.m in Sources */,
+				E30A8E8D159D2FDB00674152 /* Graphics.m in Sources */,
+				E30A8E94159D33C700674152 /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

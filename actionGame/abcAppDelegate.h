@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface abcAppDelegate : UIResponder <UIApplicationDelegate>
-
+@interface abcAppDelegate : UIResponder <UIApplicationDelegate>{
+    
+    UIWindow* _window;
+    UIViewController* _viewCtl;
+    
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

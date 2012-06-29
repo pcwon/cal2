@@ -7,19 +7,35 @@
 //
 
 #import "abcAppDelegate.h"
-
+#import "ActionView.h"
 @implementation abcAppDelegate
 
 @synthesize window = _window;
-
+//어플리케이션 시작 시에 호출된다.
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //윈도우의 생성과 추가 
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    //뷰컨트롤러의 생성과 추가 
+    CGRect bounds=[[UIScreen mainScreen]bounds];
+    bounds.origin.y+=20;
+    bounds.size.height-=20;
+    _viewCtl = [[ActionView alloc]init];
+    [_viewCtl.view setFrame:bounds];
+    [_window addSubview:_viewCtl.view];
+    
+    
     return YES;
 }
+//메모리 해제
+-(void)dealloc{
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
