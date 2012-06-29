@@ -117,7 +117,7 @@
     _tick = 0;
     _key = KEY_NONE;
     }
-/////////플레이 시의 처리 
+//////플레이 시의 처리 
     if (_scene==S_PLAY) {
         //점수 가산 
         _scene++;
@@ -143,7 +143,7 @@
                 _jumpAble=YES;
             }
         }
-////////// //스크롤 처리(2)
+///스크롤 처리(2)
         _mapDX-=10;
         if (_mapDX==-50) {
             _mapDX=0;
@@ -177,7 +177,7 @@
             }
 
         }
-///////////// //점프 처리 (3)
+///점프 처리 (3)
         if (_jumpAble) {
             if (_touchDown) {
                 _jumpAble=NO;
@@ -189,14 +189,72 @@
             }
         }
  }
-//게임오버 때의 처리 
+///게임오버 때의 처리 
     else if(_scene ==S_GAMEOVER){
         if (_playerY<700) {
             _playerY+=16;
         }
     }
+    //배경 지정
+    [_g drawImage:[_bmp objectAtIndex:0] x:0 y:0 w:WIDTH h:HEIGHT];
+     
+    //플레이어 출력
+    int idx=3;
+    if (_jumpAble) {
+        idx=2+_score%2;
+        [_g drawImage:[_bmp objectAtIndex:idx] x:75 y:-50];
+    }
+    //지면출력
+    for (int i=0; i<12; i++) {
+        [_g drawImage:[_bmp objectAtIndex:1] x:_mapDX+i*50 y:HEIGHT-_mapH[i]*50];
+    }
+    //점수출력
+    [_g setColorR:1 g:1 b:1];
+    [_g setFont:[UIFont systemFontOfSize:24]];
+    [_g drawString:[NSString stringWithFormat:@"SCORE %@",[self num2str:_score len:6]] x:10 y:30];
+    //메세지 출력
+    if (_message != nil) {
+        [_g drawString:_message x:(WIDTH-[_g stringWidth:_message])/2 y:50];
+        
+    }
+    //시간경과
+    _key=-999;
+    _tick++;
+    if (_tick>999) {
+        _tick=100;
+    }
+}
+
+///////정기적인 처리
+-(void)onTick:(NSTimer*)timer{
+    [self setNeedsDisplay];
     
 }
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_scene==S_TITLE) {
+        _init=S_PLAY;
+    }else if (_scene==S_PLAY){
+        _touchDown=YES;
+    }else {
+        if (_playerY>=HEIGHT+50) {
+            _init=S_TITLE;
+        }
+    }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    if (_scene == S_PLAY) {
+        _touchDown=false;
+        
+    }
+}
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self touchesCancelled:touches withEvent:event];
+    
+}
+
+
 
 
 
